@@ -9,11 +9,11 @@ import RealityKitt
 final class RealityKitARViewInitializerTests: XCTestCase {
 
     func testInitializerAvailability_init_frame_cameraMode_automaticallyConfigureSession() {
-        _ = RealityKit.ARView(frame: .zero, cameraMode: .ar, automaticallyConfigureSession: true)
+        _ = { RealityKit.ARView(frame: .zero, cameraMode: .ar, automaticallyConfigureSession: true) }
     }
 
     func testInitializerAvailability_init_frame_cameraMode() {
-        _ = RealityKit.ARView(frame: .zero, cameraMode: .nonAR)
+        _ = { RealityKit.ARView(frame: .zero, cameraMode: .nonAR) }
     }
 
 }
@@ -66,7 +66,7 @@ final class RealityKitARViewEnvironmentTests: XCTestCase {
     typealias SceneUnderstanding = RealityKit.ARView.Environment.SceneUnderstanding
 
     func testInstancePropertyAvailability_sceneUnderstanding() {
-        let _: SceneUnderstanding = RealityKit.ARView(frame: .zero).environment.sceneUnderstanding
+        let _: () -> SceneUnderstanding = { RealityKit.ARView(frame: .zero).environment.sceneUnderstanding }
     }
 
     func testInstancePropertyMutability_sceneUnderstanding() {
@@ -84,11 +84,11 @@ final class RealityKitARviewEnvironmentSceneUnderstandingTests: XCTestCase {
     typealias Options = RealityKit.ARView.Environment.SceneUnderstanding.Options
 
     func testInstancePropertyAvailability_options() {
-        let _: Options = RealityKit.ARView(frame: .zero).environment.sceneUnderstanding.options
+        let _: () -> Options = { RealityKit.ARView(frame: .zero).environment.sceneUnderstanding.options }
     }
 
     func testInstancePropertyMutability_options() {
-        RealityKit.ARView(frame: .zero).environment.sceneUnderstanding.options = .default
+        _ = { RealityKit.ARView(frame: .zero).environment.sceneUnderstanding.options = .default }
     }
 
 }
@@ -130,11 +130,11 @@ final class RealityKitARViewRenderOptionsTests: XCTestCase {
     // MARK: ARView
 
     func testInstancePropertyAvailability_renderOptions() {
-        let _: RenderOptions = RealityKit.ARView(frame: .zero).renderOptions
+        let _: () -> RenderOptions = { RealityKit.ARView(frame: .zero).renderOptions }
     }
 
     func testInstancePropertyMutability_renderOptions() {
-        RealityKit.ARView(frame: .zero).renderOptions = [.disableFaceMesh, .disableAREnvironmentLighting]
+        _ = { RealityKit.ARView(frame: .zero).renderOptions = [.disableFaceMesh, .disableAREnvironmentLighting] }
     }
 
     // MARK: ARView.RenderOptions
@@ -187,7 +187,9 @@ final class RealityKitARViewRenderOptionsTests: XCTestCase {
 final class RealityKitARViewHitTestingTests: XCTestCase {
 
     func testInstanceMethodAvailability_hitTest() {
-        let _: [ARHitTestResult] = RealityKit.ARView(frame: .zero).hitTest(.zero, types: .estimatedHorizontalPlane)
+        let _: () -> [ARHitTestResult] = {
+            RealityKit.ARView(frame: .zero).hitTest(.zero, types: .estimatedHorizontalPlane)
+        }
     }
 
 }
@@ -198,21 +200,27 @@ final class RealityKitARViewHitTestingTests: XCTestCase {
 final class RealityKitARViewRaycastingTests: XCTestCase {
 
     func testInstanceMethodAvailability_makeRaycastQuery() {
-        let view = RealityKit.ARView(frame: .zero)
-        let _: ARKit.ARRaycastQuery? = view.makeRaycastQuery(from: .zero, allowing: .estimatedPlane, alignment: .any)
+        let _: () -> ARKit.ARRaycastQuery? = {
+            let view = RealityKit.ARView(frame: .zero)
+            return view.makeRaycastQuery(from: .zero, allowing: .estimatedPlane, alignment: .any)
+        }
     }
 
     func testInstanceMethodPresence_trackedRaycast() {
-        let view = RealityKit.ARView(frame: .zero)
-        let _: ARKit.ARTrackedRaycast? = view.trackedRaycast(from: .zero,
-                                                             allowing: .estimatedPlane,
-                                                             alignment: .any,
-                                                             updateHandler: { _ in })
+        let _: () -> ARKit.ARTrackedRaycast? = {
+            let view = RealityKit.ARView(frame: .zero)
+            return view.trackedRaycast(from: .zero,
+                                       allowing: .estimatedPlane,
+                                       alignment: .any,
+                                       updateHandler: { _ in })
+        }
     }
 
     func testInstanceMethodPresence_raycast() {
-        let view = RealityKit.ARView(frame: .zero)
-        let _: [ARKit.ARRaycastResult] = view.raycast(from: .zero, allowing: .estimatedPlane, alignment: .any)
+        let _: () -> [ARKit.ARRaycastResult] = {
+            let view = RealityKit.ARView(frame: .zero)
+            return view.raycast(from: .zero, allowing: .estimatedPlane, alignment: .any)
+        }
     }
 
 }
@@ -227,11 +235,11 @@ final class RealityKitARViewCameraModeTests: XCTestCase {
     // MARK: RealityKit.ARView
 
     func testInstancePropertyAvailability_cameraMode() {
-        let _: CameraMode = RealityKit.ARView(frame: .zero).cameraMode
+        let _: () -> CameraMode = { RealityKit.ARView(frame: .zero).cameraMode }
     }
 
     func testInstancePropertyMutability_cameraMode() {
-        RealityKit.ARView(frame: .zero).cameraMode = .ar
+        _ = { RealityKit.ARView(frame: .zero).cameraMode = .ar }
     }
 
     // MARK: RealityKit.ARView.CameraMode
@@ -252,19 +260,19 @@ final class RealityKitARViewCameraModeTests: XCTestCase {
 final class RealityKitARViewSessionTests: XCTestCase {
 
     func testInstancePropertyAvailability_session() {
-        let _: ARKit.ARSession = RealityKit.ARView(frame: .zero).session
+        let _: () -> ARKit.ARSession = { RealityKit.ARView(frame: .zero).session }
     }
 
     func testInstancePropertyMutability_session() {
-        RealityKit.ARView(frame: .zero).session = ARKit.ARSession()
+        _ = { RealityKit.ARView(frame: .zero).session = ARKit.ARSession() }
     }
 
     func testInstancePropertyAvailability_automaticallyConfigureSession() {
-        let _: Swift.Bool = RealityKit.ARView(frame: .zero).automaticallyConfigureSession
+        let _: () -> Swift.Bool = { RealityKit.ARView(frame: .zero).automaticallyConfigureSession }
     }
 
     func testInstancePropertyMutability_automaticallyConfigureSession() {
-        RealityKit.ARView(frame: .zero).automaticallyConfigureSession = true
+        _ = { RealityKit.ARView(frame: .zero).automaticallyConfigureSession = true }
     }
 
     func testProtocolConformance_ARSessionProviding() {

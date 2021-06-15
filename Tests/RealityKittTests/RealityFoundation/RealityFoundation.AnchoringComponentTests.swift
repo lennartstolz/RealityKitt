@@ -1,46 +1,46 @@
 import XCTest
 
-import RealityFoundation
+import RealityKit
 
-// MARK: - RealityFoundation.AnchoringComponent.Target
+// MARK: - RealityKit.AnchoringComponent.Target
 
 @available(iOS 13.0, *)
 final class RealityFoundationAnchoringComponentTargetTests: XCTestCase {
 
-    typealias Target = RealityFoundation.AnchoringComponent.Target
+    typealias Target = RealityKit.AnchoringComponent.Target
 
     func testEnumCaseAvailability_anchor() {
-        _ = Target.anchor(identifier: UUID())
+        _ = { Target.anchor(identifier: UUID()) }
     }
 
     func testEnumCaseAvailability_plane() {
-        _ = Target.plane(.any, classification: .any, minimumBounds: [0, 0])
+        _ = { Target.plane(.any, classification: .any, minimumBounds: [0, 0]) }
     }
 
     func testEnumCaseAvailability_image() {
-        _ = Target.image(group: "🎨", name: "👨‍🎨")
+        _ = { Target.image(group: "🎨", name: "👨‍🎨") }
     }
 
     func testEnumCaseAvailability_group() {
-        _ = Target.image(group: "👫", name: "🤷‍♂️")
+        _ = { Target.image(group: "👫", name: "🤷‍♂️") }
     }
 
     func testEnumCaseAvailability_face() {
-        _ = Target.face
+        _ = { Target.face }
     }
 
     func testEnumCase_body() {
-        _ = Target.body
+        _ = { Target.body }
     }
 
 }
 
-// MARK: - RealityFoundation.AnchoringComponent.Target.Alignment
+// MARK: - RealityKit.AnchoringComponent.Target.Alignment
 
 @available(iOS 13.0, *)
 final class RealityFoundationAnchoringComponentTargetAlignmentTests: XCTestCase {
 
-    typealias Alignment = RealityFoundation.AnchoringComponent.Target.Alignment
+    typealias Alignment = RealityKit.AnchoringComponent.Target.Alignment
 
     func testOptionAvailability_horizontal() {
         XCTAssertEqual(1, Alignment.horizontal.rawValue)
@@ -56,12 +56,12 @@ final class RealityFoundationAnchoringComponentTargetAlignmentTests: XCTestCase 
 
 }
 
-// MARK: - RealityFoundation.AnchoringComponent.Target.Classification
+// MARK: - RealityKit.AnchoringComponent.Target.Classification
 
 @available(iOS 13.0, *)
 final class RealityFoundationAnchoringComponentTargetClassificationTests: XCTestCase {
 
-    typealias Classification = RealityFoundation.AnchoringComponent.Target.Classification
+    typealias Classification = RealityKit.AnchoringComponent.Target.Classification
 
     func testOptionAvailability_wall() {
         XCTAssertEqual(1, Classification.wall.rawValue)

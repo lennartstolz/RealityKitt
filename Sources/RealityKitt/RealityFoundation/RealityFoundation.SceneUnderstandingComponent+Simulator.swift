@@ -1,9 +1,9 @@
 #if targetEnvironment(simulator)
 
-import RealityFoundation
+import RealityKit
 
 @available(iOS 13.4, *)
-public struct SceneUnderstandingComponent : RealityFoundation.Component {
+public struct SceneUnderstandingComponent : RealityKit.Component {
 
     public enum EntityType : Swift.Hashable {
         case meshChunk

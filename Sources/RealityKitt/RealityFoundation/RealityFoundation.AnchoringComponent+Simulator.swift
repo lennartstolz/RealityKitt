@@ -1,13 +1,13 @@
 #if targetEnvironment(simulator)
 
 import Foundation
-import RealityFoundation
+import RealityKit
 
-// MARK: - RealityFoundation.AnchoringComponent.Target
+// MARK: - RealityKit.AnchoringComponent.Target
 
 // FIXME - Doc - it's not the same ;)
 @available(iOS 13.0, *)
-extension RealityFoundation.AnchoringComponent.Target {
+extension RealityKit.AnchoringComponent.Target {
 
     public static func anchor(identifier: Foundation.UUID) -> Self {
         .world(transform: matrix_identity_float4x4)
@@ -33,10 +33,10 @@ extension RealityFoundation.AnchoringComponent.Target {
 
 }
 
-// MARK: - RealityFoundation.AnchoringComponent.Target + Alignment
+// MARK: - RealityKit.AnchoringComponent.Target + Alignment
 
 @available(iOS 13.0, *)
-extension RealityFoundation.AnchoringComponent.Target {
+extension RealityKit.AnchoringComponent.Target {
 
     public struct Alignment : Swift.OptionSet {
 
@@ -62,10 +62,10 @@ extension RealityFoundation.AnchoringComponent.Target {
 
 }
 
-// MARK: - RealityFoundation.AnchoringComponent.Target + Classification
+// MARK: - RealityKit.AnchoringComponent.Target + Classification
 
 @available(iOS 13.0, *)
-extension RealityFoundation.AnchoringComponent.Target {
+extension RealityKit.AnchoringComponent.Target {
 
     public struct Classification : Swift.OptionSet {
 

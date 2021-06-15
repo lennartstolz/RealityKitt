@@ -1,14 +1,14 @@
 import XCTest
 
+import RealityKit
 import RealityKitt
-import RealityFoundation
 
 @available(iOS 13.0, *)
 final class RealityFoundationEntityTests: XCTestCase {
 
     func testTypeMethodAvailability_loadBodyTracked_named_in() throws {
-        let _: BodyTrackedEntity = try Entity.loadBodyTracked(named: "💃")
-        let _: BodyTrackedEntity = try Entity.loadBodyTracked(named: "🕺", in: .main)
+        let _: () throws -> BodyTrackedEntity = { try Entity.loadBodyTracked(named: "💃") }
+        let _: () throws -> BodyTrackedEntity = { try Entity.loadBodyTracked(named: "🕺", in: .main) }
     }
 
     func testTypeMethodAvailability_loadBodyTrackedAsync_named_in() {
@@ -26,8 +26,8 @@ final class RealityFoundationEntityTests: XCTestCase {
 
     func testTypeMethodAvailability_loadBodyTracked_contentsOf_withName() throws {
         let url = URL(fileURLWithPath: "/tmp/model.usdz")
-        let _: BodyTrackedEntity = try Entity.loadBodyTracked(contentsOf: url)
-        let _: BodyTrackedEntity = try Entity.loadBodyTracked(contentsOf: url, withName: "💃")
+        let _: () throws -> BodyTrackedEntity = { try Entity.loadBodyTracked(contentsOf: url) }
+        let _: () throws -> BodyTrackedEntity = { try Entity.loadBodyTracked(contentsOf: url, withName: "💃") }
     }
 
     func testTypeMethodAvailability_loadBodyTrackedAsync_contentsOf_withName() {

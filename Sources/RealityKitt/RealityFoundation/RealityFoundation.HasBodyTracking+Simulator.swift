@@ -1,9 +1,9 @@
 #if targetEnvironment(simulator)
 
-import RealityFoundation
+import RealityKit
 
 @available(iOS 13.0, *)
-public protocol HasBodyTracking : RealityFoundation.HasTransform { }
+public protocol HasBodyTracking : RealityKit.HasTransform { }
 
 @available(iOS 13.0, *)
 extension HasBodyTracking {
