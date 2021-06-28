@@ -1,9 +1,9 @@
 #if targetEnvironment(simulator)
 
-import RealityFoundation
+import RealityKit
 
 @available(iOS 13.4, *)
-public protocol HasSceneUnderstanding : RealityFoundation.Entity { }
+public protocol HasSceneUnderstanding : RealityKit.Entity { }
 
 @available(iOS 13.4, *)
 extension HasSceneUnderstanding {

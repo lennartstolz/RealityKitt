@@ -1,21 +1,21 @@
 import XCTest
 
+import RealityKit
 import RealityKitt
-import RealityFoundation
 
-// MARK: - RealityFoundation.HasSceneUnderstanding
+// MARK: - RealityKit.HasSceneUnderstanding
 
 @available(iOS 13.4, *)
 final class RealityFoundationHasSceneUnderstandingTests: XCTestCase {
 
     func testProtocolAvailability() {
-        class Implementation: RealityFoundation.Entity, HasSceneUnderstanding { }
-        _ = Implementation()
+        class Implementation: RealityKit.Entity, HasSceneUnderstanding { }
+        _ = { Implementation() }
     }
 
     func testInstanceProperty_sceneUnderstanding() {
-        class Implementation: RealityFoundation.Entity, HasSceneUnderstanding { }
-        _ = Implementation().sceneUnderstanding
+        class Implementation: RealityKit.Entity, HasSceneUnderstanding { }
+        _ = { Implementation().sceneUnderstanding }
 
     }
 

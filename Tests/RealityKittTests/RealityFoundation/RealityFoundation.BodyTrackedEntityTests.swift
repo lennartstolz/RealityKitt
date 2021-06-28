@@ -1,21 +1,21 @@
 import XCTest
 
 import RealityKitt
-import RealityFoundation
+import RealityKit
 
 @available(iOS 13.0, *)
 final class RealityFoundationBodyTrackedEntityTests: XCTestCase {
 
     func testBaseClass() {
-        _ = BodyTrackedEntity() as Entity
+        _ = { BodyTrackedEntity() as Entity }
     }
 
     func testProtocolConformance_Hashable() {
-        _ = BodyTrackedEntity().hashValue
+        _ = { BodyTrackedEntity().hashValue  }
     }
 
     func testProtocolConformance_HasBodyTracking() {
-        _ = BodyTrackedEntity().bodyTracking
+        _ = { BodyTrackedEntity().bodyTracking  }
     }
 
 }

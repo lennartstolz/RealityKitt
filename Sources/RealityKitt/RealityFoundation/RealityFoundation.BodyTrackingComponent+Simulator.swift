@@ -1,10 +1,10 @@
 #if targetEnvironment(simulator)
 
 import Foundation
-import RealityFoundation
+import RealityKit
 
 @available(iOS 13.0, *)
-public struct BodyTrackingComponent : RealityFoundation.Component, Swift.Equatable {
+public struct BodyTrackingComponent : RealityKit.Component, Swift.Equatable {
 
     public enum Target : Swift.Hashable {
         case any

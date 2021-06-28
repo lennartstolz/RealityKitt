@@ -1,10 +1,10 @@
 #if targetEnvironment(simulator)
 
 import Foundation
-import RealityFoundation
+import RealityKit
 
 @available(iOS 13.0, *)
-extension RealityFoundation.Entity {
+extension RealityKit.Entity {
 
     public static func loadBodyTracked(named name: Swift.String,
                                        in bundle: Foundation.Bundle? = nil) throws -> BodyTrackedEntity {
@@ -13,8 +13,8 @@ extension RealityFoundation.Entity {
 
     public static func loadBodyTrackedAsync(named name: Swift.String,
                                             in bundle: Foundation.Bundle? = nil)
-    -> RealityFoundation.LoadRequest<BodyTrackedEntity> {
-        // RealityFoundation.LoadRequest cannot be constructed because it has no accessible initializers.
+    -> RealityKit.LoadRequest<BodyTrackedEntity> {
+        // RealityKit.LoadRequest cannot be constructed because it has no accessible initializers.
         // Because of that we cannot return a failing load request. Instead, a `fatalError` is thrown.
         fatalError("loadBodyTrackedAsync(named:in:) has not been implemented")
     }
@@ -26,8 +26,8 @@ extension RealityFoundation.Entity {
 
     public static func loadBodyTrackedAsync(contentsOf url: Foundation.URL,
                                             withName resourceName: Swift.String? = nil)
-    -> RealityFoundation.LoadRequest<BodyTrackedEntity> {
-        // RealityFoundation.LoadRequest cannot be constructed because it has no accessible initializers.
+    -> RealityKit.LoadRequest<BodyTrackedEntity> {
+        // RealityKit.LoadRequest cannot be constructed because it has no accessible initializers.
         // Because of that we cannot return a failing load request. Instead, a `fatalError` is thrown.
         fatalError("loadBodyTrackedAsync(contentsOf:withName:) has not been implemented")
     }

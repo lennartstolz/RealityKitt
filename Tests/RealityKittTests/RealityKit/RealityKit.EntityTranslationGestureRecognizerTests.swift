@@ -37,14 +37,14 @@ final class RealityKitEntityTranslationGestureRecognizerTests: XCTestCase {
 
     func testSubclassMethodOverriding_translation() {
         class Subclass: EntityTranslationGestureRecognizer {
-            override func translation(in entity: RealityFoundation.Entity?) -> Swift.SIMD3<Swift.Float>? {  [0, 0, 0] }
+            override func translation(in entity: RealityKit.Entity?) -> Swift.SIMD3<Swift.Float>? {  [0, 0, 0] }
         }
         _ = Subclass(target: nil, action: nil)
     }
 
     func testSubclassMethodOverriding_setTranslation() {
         class Subclass: EntityTranslationGestureRecognizer {
-            override func setTranslation(_ translation: Swift.SIMD3<Swift.Float>, in: RealityFoundation.Entity?) { }
+            override func setTranslation(_ translation: Swift.SIMD3<Swift.Float>, in: RealityKit.Entity?) { }
         }
         _ = Subclass(target: nil, action: nil)
     }

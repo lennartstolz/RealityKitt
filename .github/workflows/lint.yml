@@ -8,8 +8,8 @@ on:
 
 jobs:
   lint:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
-      - name: lint
-        uses: norio-nomura/action-swiftlint@3.1.0
+      - name: SwiftLint
+        run: swiftlint

@@ -1,10 +1,10 @@
 #if targetEnvironment(simulator)
 
 import ARKit
-import RealityFoundation
+import RealityKit
 
 @available(iOS 13.0, *)
-extension RealityFoundation.AnchoringComponent {
+extension RealityKit.AnchoringComponent {
 
     public init(_ anchor: ARKit.ARAnchor) {
         self.init(.anchor(identifier: anchor.identifier))

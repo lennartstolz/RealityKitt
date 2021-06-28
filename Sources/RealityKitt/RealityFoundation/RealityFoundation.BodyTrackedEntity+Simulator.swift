@@ -1,8 +1,8 @@
 #if targetEnvironment(simulator)
 
-import RealityFoundation
+import RealityKit
 
 @available(iOS 13.0, *)
-public class BodyTrackedEntity : RealityFoundation.Entity, HasBodyTracking, RealityFoundation.HasModel { }
+public class BodyTrackedEntity : RealityKit.Entity, HasBodyTracking, RealityKit.HasModel { }
 
 #endif

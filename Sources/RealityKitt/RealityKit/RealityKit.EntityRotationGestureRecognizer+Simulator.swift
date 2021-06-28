@@ -1,12 +1,12 @@
 #if targetEnvironment(simulator)
 
 import UIKit
-import RealityFoundation
+import RealityKit
 
 @available(iOS 13.0, *)
 open class EntityRotationGestureRecognizer : UIKit.UIRotationGestureRecognizer, EntityGestureRecognizer {
 
-    public var entity: RealityFoundation.HasCollision?
+    public var entity: RealityKit.HasCollision?
 
 }
 

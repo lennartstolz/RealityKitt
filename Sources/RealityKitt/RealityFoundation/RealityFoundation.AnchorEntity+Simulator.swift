@@ -1,14 +1,14 @@
 #if targetEnvironment(simulator)
 
-import RealityFoundation
+import RealityKit
 
-// MARK: - RealityFoundation.AnchorEntity
+// MARK: - RealityKit.AnchorEntity
 
 @available(iOS 13.0, *)
-extension RealityFoundation.AnchorEntity {
+extension RealityKit.AnchorEntity {
 
-    public convenience init(plane: RealityFoundation.AnchoringComponent.Target.Alignment,
-                            classification: RealityFoundation.AnchoringComponent.Target.Classification = .any,
+    public convenience init(plane: RealityKit.AnchoringComponent.Target.Alignment,
+                            classification: RealityKit.AnchoringComponent.Target.Classification = .any,
                             minimumBounds: Swift.SIMD2<Swift.Float> = [0, 0]) {
         self.init(world: matrix_identity_float4x4)
     }

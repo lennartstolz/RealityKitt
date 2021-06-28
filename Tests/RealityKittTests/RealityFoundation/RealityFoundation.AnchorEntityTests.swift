@@ -1,19 +1,19 @@
 import XCTest
 
-import RealityFoundation
+import RealityKit
 
-// MARK: - RealityFoundation.AnchorEntity + Initializer
+// MARK: - RealityKit.AnchorEntity + Initializer
 
 @available(iOS 13.0, *)
 final class RealityFoundationAnchorEntityTests: XCTestCase {
 
     func testInitializerAvailability_init_plane_classification_minimumBounds() {
-        _ = RealityFoundation.AnchorEntity(plane: .any)
-        _ = RealityFoundation.AnchorEntity.init(plane: .any)
-        _ = RealityFoundation.AnchorEntity(plane: .any, classification: .any)
-        _ = RealityFoundation.AnchorEntity.init(plane: .any, classification: .any)
-        _ = RealityFoundation.AnchorEntity(plane: .any, classification: .any, minimumBounds: [0, 0])
-        _ = RealityFoundation.AnchorEntity.init(plane: .any, classification: .any, minimumBounds: [0, 0])
+        _ = { RealityKit.AnchorEntity(plane: .any) }
+        _ = { RealityKit.AnchorEntity.init(plane: .any) }
+        _ = { RealityKit.AnchorEntity(plane: .any, classification: .any) }
+        _ = { RealityKit.AnchorEntity.init(plane: .any, classification: .any) }
+        _ = { RealityKit.AnchorEntity(plane: .any, classification: .any, minimumBounds: [0, 0]) }
+        _ = { RealityKit.AnchorEntity.init(plane: .any, classification: .any, minimumBounds: [0, 0]) }
     }
 
 }

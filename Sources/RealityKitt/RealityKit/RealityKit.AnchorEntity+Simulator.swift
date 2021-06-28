@@ -1,10 +1,10 @@
 #if targetEnvironment(simulator)
 
 import ARKit
-import RealityFoundation
+import RealityKit
 
 @available(iOS 13.0, *)
-extension RealityFoundation.AnchorEntity {
+extension RealityKit.AnchorEntity {
 
     public convenience init(anchor: ARKit.ARAnchor) {
         self.init(world: matrix_identity_float4x4)

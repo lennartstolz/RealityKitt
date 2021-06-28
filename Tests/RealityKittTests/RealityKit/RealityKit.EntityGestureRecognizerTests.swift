@@ -3,7 +3,6 @@ import XCTest
 import UIKit
 import RealityKit
 import RealityKitt
-import RealityFoundation
 
 @available(iOS 13.0, *)
 final class RealityKitEntityGestureRecognizerTests: XCTestCase {
@@ -26,7 +25,7 @@ final class RealityKitEntityGestureRecognizerTests: XCTestCase {
 @available(iOS 13.0, *)
 private class GestureMock: UIKit.UIGestureRecognizer, EntityGestureRecognizer {
 
-    var entity: RealityFoundation.HasCollision?
+    var entity: RealityKit.HasCollision?
 
     init() {
         super.init(target: nil, action: nil)
