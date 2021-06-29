@@ -5,8 +5,8 @@ import RealityKitt
 
 // MARK: - RealityKit.SceneUnderstandingComponent
 
-@available(iOS 13.4, *)
-final class RealityFoundationSceneUnderstandingComponentTests: XCTestCase {
+@available(iOS 15.0, *)
+final class SceneUnderstandingComponentTests: XCTestCase {
 
     func testInitializerAvailability_init() {
         _ = { SceneUnderstandingComponent() }
@@ -28,8 +28,8 @@ final class RealityFoundationSceneUnderstandingComponentTests: XCTestCase {
 
 // MARK: - RealityKit.SceneUnderstandingComponent.EntityType
 
-@available(iOS 13.4, *)
-final class RealityFoundationSceneUnderstandingComponentEntityTypeTests: XCTestCase {
+@available(iOS 15.0, *)
+final class SceneUnderstandingComponentEntityTypeTests: XCTestCase {
 
     typealias EntityType = SceneUnderstandingComponent.EntityType
 
