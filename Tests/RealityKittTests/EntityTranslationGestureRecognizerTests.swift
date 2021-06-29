@@ -4,7 +4,7 @@ import RealityKit
 import RealityKitt
 
 @available(iOS 13.0, *)
-final class RealityKitEntityTranslationGestureRecognizerTests: XCTestCase {
+final class EntityTranslationGestureRecognizerTests: XCTestCase {
 
     func testProtocolConformance_EntityGestureRecognizer() {
         let _: EntityGestureRecognizer = EntityTranslationGestureRecognizer(target: nil, action: nil)
