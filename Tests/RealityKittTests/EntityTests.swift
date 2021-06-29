@@ -4,7 +4,7 @@ import RealityKit
 import RealityKitt
 
 @available(iOS 13.0, *)
-final class RealityFoundationEntityTests: XCTestCase {
+final class EntityTests: XCTestCase {
 
     func testTypeMethodAvailability_loadBodyTracked_named_in() throws {
         let _: () throws -> BodyTrackedEntity = { try Entity.loadBodyTracked(named: "💃") }
