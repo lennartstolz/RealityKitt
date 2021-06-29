@@ -6,7 +6,7 @@ import RealityKitt
 // MARK: - RealityKit.ARView + Initializer
 
 @available(iOS 13.0, *)
-final class RealityKitARViewInitializerTests: XCTestCase {
+final class ARViewInitializerTests: XCTestCase {
 
     func testInitializerAvailability_init_frame_cameraMode_automaticallyConfigureSession() {
         _ = { RealityKit.ARView(frame: .zero, cameraMode: .ar, automaticallyConfigureSession: true) }
@@ -21,7 +21,7 @@ final class RealityKitARViewInitializerTests: XCTestCase {
 // MARK: - RealityKit.ARView.DebugOptions
 
 @available(iOS 13.0, *)
-final class RealityKitARViewDebugOptionTests: XCTestCase {
+final class ARViewDebugOptionTests: XCTestCase {
 
     typealias DebugOptions = RealityKit.ARView.DebugOptions
 
@@ -47,7 +47,7 @@ final class RealityKitARViewDebugOptionTests: XCTestCase {
 // MARK: - RealityKit.ARView.Environment.Background
 
 @available(iOS 13.0, *)
-final class RealityKitARViewEnvironmentBackgroundTests: XCTestCase {
+final class ARViewEnvironmentBackgroundTests: XCTestCase {
 
     typealias Background = RealityKit.ARView.Environment.Background
 
@@ -61,7 +61,7 @@ final class RealityKitARViewEnvironmentBackgroundTests: XCTestCase {
 // MARK: - RealityKit.ARView.Environment.SceneUnderstanding
 
 @available(iOS 13.4, *)
-final class RealityKitARViewEnvironmentTests: XCTestCase {
+final class ARViewEnvironmentTests: XCTestCase {
 
     typealias SceneUnderstanding = RealityKit.ARView.Environment.SceneUnderstanding
 
@@ -79,7 +79,7 @@ final class RealityKitARViewEnvironmentTests: XCTestCase {
 }
 
 @available(iOS 13.4, *)
-final class RealityKitARviewEnvironmentSceneUnderstandingTests: XCTestCase {
+final class ARviewEnvironmentSceneUnderstandingTests: XCTestCase {
 
     typealias Options = RealityKit.ARView.Environment.SceneUnderstanding.Options
 
@@ -94,7 +94,7 @@ final class RealityKitARviewEnvironmentSceneUnderstandingTests: XCTestCase {
 }
 
 @available(iOS 13.4, *)
-final class RealityKitARviewEnvironmentSceneUnderstandingOptionsTests: XCTestCase {
+final class ARViewEnvironmentSceneUnderstandingOptionsTests: XCTestCase {
 
     typealias Options = RealityKit.ARView.Environment.SceneUnderstanding.Options
 
@@ -123,7 +123,7 @@ final class RealityKitARviewEnvironmentSceneUnderstandingOptionsTests: XCTestCas
 // MARK: - RealityKit.ARView + RenderOptions
 
 @available(iOS 13.0, *)
-final class RealityKitARViewRenderOptionsTests: XCTestCase {
+final class ARViewRenderOptionsTests: XCTestCase {
 
     typealias RenderOptions = RealityKit.ARView.RenderOptions
 
@@ -134,7 +134,7 @@ final class RealityKitARViewRenderOptionsTests: XCTestCase {
     }
 
     func testInstancePropertyMutability_renderOptions() {
-        _ = { RealityKit.ARView(frame: .zero).renderOptions = [.disableFaceMesh, .disableAREnvironmentLighting] }
+        _ = { RealityKit.ARView(frame: .zero).renderOptions = [.disableHDR, .disableAREnvironmentLighting] }
     }
 
     // MARK: ARView.RenderOptions
@@ -175,6 +175,7 @@ final class RealityKitARViewRenderOptionsTests: XCTestCase {
         XCTAssertEqual(256, RenderOptions.disableAREnvironmentLighting.rawValue)
     }
 
+    @available(iOS 15.0, *)
     func testTypePropertyAvailability_disableFaceMesh() {
         XCTAssertEqual(1024, RenderOptions.disableFaceMesh.rawValue)
     }
@@ -184,7 +185,7 @@ final class RealityKitARViewRenderOptionsTests: XCTestCase {
 // MARK: - RealityKit.ARView + Hit Testing
 
 @available(iOS 13.0, *)
-final class RealityKitARViewHitTestingTests: XCTestCase {
+final class ARViewHitTestingTests: XCTestCase {
 
     func testInstanceMethodAvailability_hitTest() {
         let _: () -> [ARHitTestResult] = {
@@ -197,7 +198,7 @@ final class RealityKitARViewHitTestingTests: XCTestCase {
 // MARK: - RealityKit.ARView + Raycasting
 
 @available(iOS 13.0, *)
-final class RealityKitARViewRaycastingTests: XCTestCase {
+final class ARViewRaycastingTests: XCTestCase {
 
     func testInstanceMethodAvailability_makeRaycastQuery() {
         let _: () -> ARKit.ARRaycastQuery? = {
@@ -228,7 +229,7 @@ final class RealityKitARViewRaycastingTests: XCTestCase {
 // MARK: - RealityKit.ARView.CameraMode
 
 @available(iOS 13.0, *)
-final class RealityKitARViewCameraModeTests: XCTestCase {
+final class ARViewCameraModeTests: XCTestCase {
 
     typealias CameraMode = RealityKit.ARView.CameraMode
 
@@ -257,7 +258,7 @@ final class RealityKitARViewCameraModeTests: XCTestCase {
 // MARK: - RealityKit.ARView + ARKit.ARSession
 
 @available(iOS 13.0, *)
-final class RealityKitARViewSessionTests: XCTestCase {
+final class ARViewSessionTests: XCTestCase {
 
     func testInstancePropertyAvailability_session() {
         let _: () -> ARKit.ARSession = { RealityKit.ARView(frame: .zero).session }

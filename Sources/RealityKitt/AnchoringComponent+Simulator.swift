@@ -4,6 +4,8 @@ import ARKit
 import Foundation
 import RealityKit
 
+// MARK: - RealityKit.AnchoringComponent + Initializer
+
 @available(iOS 13.0, *)
 extension RealityKit.AnchoringComponent {
 
@@ -16,6 +18,8 @@ extension RealityKit.AnchoringComponent {
     }
 
 }
+
+// MARK: - RealityKit.AnchoringComponent + Target
 
 @available(iOS 13.0, *)
 extension RealityKit.AnchoringComponent.Target {
