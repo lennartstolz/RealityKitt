@@ -4,7 +4,7 @@ import RealityKit
 import RealityKitt
 
 @available(iOS 13.0, *)
-final class RealityFoundationHasBodyTrackingTests: XCTestCase {
+final class HasBodyTrackingTests: XCTestCase {
 
     func testProtocolAvailability() {
         class Implementation: Entity, HasBodyTracking { }
