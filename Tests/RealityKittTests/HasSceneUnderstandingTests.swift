@@ -6,7 +6,7 @@ import RealityKitt
 // MARK: - RealityKit.HasSceneUnderstanding
 
 @available(iOS 13.4, *)
-final class RealityFoundationHasSceneUnderstandingTests: XCTestCase {
+final class HasSceneUnderstandingTests: XCTestCase {
 
     func testProtocolAvailability() {
         class Implementation: RealityKit.Entity, HasSceneUnderstanding { }
