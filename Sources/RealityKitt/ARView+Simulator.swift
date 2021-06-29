@@ -317,10 +317,17 @@ extension RealityKit.ARView {
 @available(iOS 13.0, *)
 extension RealityKit.ARView {
 
+    /// Simulator interface mock of the instance method `ARView.hitTest(_:types:)`.
+    ///
+    /// The (real) instance method isn't exposed to simulators by `RealityKit`.
+    ///
+    /// - SeeAlso:
+    /// [ Documentation](https://developer.apple.com/documentation/realitykit/arview/3255310-hittest)
     public func hitTest(_ point: CoreGraphics.CGPoint,
                         types: ARKit.ARHitTestResult.ResultType) -> [ARKit.ARHitTestResult] {
         return []
     }
+
 }
 
 // MARK: - RealityKit.ARView + Raycasting
@@ -328,12 +335,24 @@ extension RealityKit.ARView {
 @available(iOS 13.0, *)
 extension RealityKit.ARView {
 
+    /// Simulator interface mock of the instance method `ARView.makeRaycastQuery(from:allowing:alignment:)`.
+    ///
+    /// The (real) instance method isn't exposed to simulators by `RealityKit`.
+    ///
+    /// - SeeAlso:
+    /// [ Documentation](https://developer.apple.com/documentation/realitykit/arview/3255315-makeraycastquery)
     public func makeRaycastQuery(from point: CoreGraphics.CGPoint,
                                  allowing target: ARKit.ARRaycastQuery.Target,
                                  alignment: ARKit.ARRaycastQuery.TargetAlignment) -> ARKit.ARRaycastQuery? {
         return nil
     }
 
+    /// Simulator interface mock of the instance method `ARView.trackedRaycast(from:allowing:alignment:updateHandler:)`.
+    ///
+    /// The (real) instance method isn't exposed to simulators by `RealityKit`.
+    ///
+    /// - SeeAlso:
+    /// [ Documentation](https://developer.apple.com/documentation/realitykit/arview/3282008-trackedraycast)
     public func trackedRaycast(from point: CoreGraphics.CGPoint,
                                allowing target: ARKit.ARRaycastQuery.Target,
                                alignment: ARKit.ARRaycastQuery.TargetAlignment,
@@ -341,6 +360,12 @@ extension RealityKit.ARView {
         return nil
     }
 
+    /// Simulator interface mock of the instance method `ARView.raycast(from:allowing:alignment:)`.
+    ///
+    /// The (real) instance method isn't exposed to simulators by `RealityKit`.
+    ///
+    /// - SeeAlso:
+    /// [ Documentation](https://developer.apple.com/documentation/realitykit/arview/3282007-raycast)
     public func raycast(from point: CoreGraphics.CGPoint,
                         allowing target: ARKit.ARRaycastQuery.Target,
                         alignment: ARKit.ARRaycastQuery.TargetAlignment) -> [ARKit.ARRaycastResult] {
