@@ -8,6 +8,8 @@ extension RealityKit.AnchorEntity {
 
     /// Simulator interface mock of `AnchorEntity.init(plane:classification:minimumBounds:)`.
     ///
+    /// The (real) initializer (with this signature) isn't exposed to simulators by `RealityKit`.
+    ///
     /// - SeeAlso:
     /// [ Documentation](https://developer.apple.com/documentation/realitykit/anchorentity/3255326-init)
     public convenience init(plane: RealityKit.AnchoringComponent.Target.Alignment,
@@ -18,6 +20,8 @@ extension RealityKit.AnchorEntity {
 
     /// Simulator interface mock of `AnchorEntity.init(anchor:)`.
     ///
+    /// The (real) initializer (with this signature) isn't exposed to simulators by `RealityKit`.
+    ///
     /// - SeeAlso:
     /// [ Documentation](https://developer.apple.com/documentation/realitykit/anchorentity/3255324-init)
     public convenience init(anchor: ARKit.ARAnchor) {
@@ -25,6 +29,8 @@ extension RealityKit.AnchorEntity {
     }
 
     /// Simulator interface mock of `AnchorEntity.init(raycastResult:)`.
+    ///
+    /// The (real) initializer (with this signature) isn't exposed to simulators by `RealityKit`.
     ///
     /// - SeeAlso:
     /// [ Documentation](https://developer.apple.com/documentation/realitykit/anchorentity/3282009-init)
