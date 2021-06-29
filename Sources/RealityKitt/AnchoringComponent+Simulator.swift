@@ -11,6 +11,8 @@ extension RealityKit.AnchoringComponent {
 
     /// Simulator interface mock of `AnchoringComponent.init(_:)`.
     ///
+    /// The (real) initializer (with this signature) isn't exposed to simulators by `RealityKit`.
+    ///
     /// - SeeAlso:
     /// [ Documentation](https://developer.apple.com/documentation/realitykit/anchoringcomponent/3255404-init)
     public init(_ anchor: ARKit.ARAnchor) {
@@ -115,6 +117,8 @@ extension RealityKit.AnchoringComponent.Target {
 
     /// Simulator interface mock of `AnchoringComponent.Target.Alignment`.
     ///
+    /// The (real) `OptionSet` isn't exposed to simulators by `RealityKit`.
+    ///
     /// - SeeAlso:
     /// [ Documentation](https://developer.apple.com/documentation/realitykit/anchoringcomponent/target/alignment)
     public struct Alignment : Swift.OptionSet {
@@ -133,17 +137,23 @@ extension RealityKit.AnchoringComponent.Target {
 
         /// Simulator interface mock of `AnchoringComponent.Target.Alignment.horizontal`.
         ///
+        /// The (real) option isn't exposed to simulators by `RealityKit`.
+        ///
         /// - SeeAlso:
         /// [ Documentation](https://developer.apple.com/documentation/realitykit/anchoringcomponent/target/alignment/3255343-horizontal)
         public static let horizontal: Self = .init(rawValue: 1 << 0)
 
         /// Simulator interface mock of `AnchoringComponent.Target.Alignment.vertical`.
         ///
+        /// The (real) option isn't exposed to simulators by `RealityKit`.
+        ///
         /// - SeeAlso:
         /// [ Documentation](https://developer.apple.com/documentation/realitykit/anchoringcomponent/target/alignment/3255363-vertical)
         public static let vertical: Self = .init(rawValue: 1 << 1)
 
         /// Simulator interface mock of `AnchoringComponent.Target.Alignment.any`.
+        ///
+        /// The (real) option isn't exposed to simulators by `RealityKit`.
         ///
         /// - SeeAlso:
         /// [ Documentation](https://developer.apple.com/documentation/realitykit/anchoringcomponent/target/alignment/3255338-any)
@@ -159,6 +169,8 @@ extension RealityKit.AnchoringComponent.Target {
 extension RealityKit.AnchoringComponent.Target {
 
     /// Simulator interface mock of `AnchoringComponent.Target.Classification`.
+    ///
+    /// The (real) `OptionSet` isn't exposed to simulators by `RealityKit`.
     ///
     /// - SeeAlso:
     /// [ Documentation](https://developer.apple.com/documentation/realitykit/anchoringcomponent/target/classification)
@@ -178,6 +190,8 @@ extension RealityKit.AnchoringComponent.Target {
 
         /// Simulator interface mock of `AnchoringComponent.Target.Classification.wall`.
         ///
+        /// The (real) option isn't exposed to simulators by `RealityKit`.
+        ///
         /// - SeeAlso:
         /// [ Documentation](https://developer.apple.com/documentation/realitykit/anchoringcomponent/target/classification/3255397-wall)
         public static let wall: Self = .init(rawValue: 1 << 0)
@@ -190,11 +204,15 @@ extension RealityKit.AnchoringComponent.Target {
 
         /// Simulator interface mock of `AnchoringComponent.Target.Classification.ceiling`.
         ///
+        /// The (real) option isn't exposed to simulators by `RealityKit`.
+        ///
         /// - SeeAlso:
         /// [ Documentation](https://developer.apple.com/documentation/realitykit/anchoringcomponent/target/classification/3255370-ceiling)
         public static let ceiling: Self = .init(rawValue: 1 << 2)
 
         /// Simulator interface mock of `AnchoringComponent.Target.Classification.table`.
+        ///
+        /// The (real) option isn't exposed to simulators by `RealityKit`.
         ///
         /// - SeeAlso:
         /// [ Documentation](https://developer.apple.com/documentation/realitykit/anchoringcomponent/target/classification/3255394-table)
@@ -202,11 +220,15 @@ extension RealityKit.AnchoringComponent.Target {
 
         /// Simulator interface mock of `AnchoringComponent.Target.Classification.seat`.
         ///
+        /// The (real) option isn't exposed to simulators by `RealityKit`.
+        ///
         /// - SeeAlso:
         /// [ Documentation](https://developer.apple.com/documentation/realitykit/anchoringcomponent/target/classification/3255390-seat)
         public static let seat: Self = .init(rawValue: 1 << 4)
 
         /// Simulator interface mock of `AnchoringComponent.Target.Classification.any`.
+        ///
+        /// The (real) option isn't exposed to simulators by `RealityKit`.
         ///
         /// - SeeAlso:
         /// [ Documentation](https://developer.apple.com/documentation/realitykit/anchoringcomponent/target/classification/3255369-any)
