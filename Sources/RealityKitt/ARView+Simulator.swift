@@ -379,21 +379,57 @@ extension RealityKit.ARView {
 @available(iOS 13.0, *)
 extension RealityKit.ARView : ARKit.ARSessionProviding {
 
+    /// Simulator interface mock of the instance property `ARView.session`.
+    ///
+    /// The (real) instance property isn't exposed to simulators by `RealityKit`.
+    ///
+    /// - SeeAlso:
+    /// [ Documentation](https://developer.apple.com/documentation/realitykit/arview/3255318-session)
     @objc dynamic public var session: ARKit.ARSession {
         get { ARKit.ARSession() }
         set { }
     }
 
+    /// Simulator interface mock of the `ARView.CameraMode` enumeration.
+    ///
+    /// The (real) enumeration isn't exposed to simulators by `RealityKit`.
+    ///
+    /// - SeeAlso:
+    /// [ Documentation](https://developer.apple.com/documentation/realitykit/arview/cameramode)
     public enum CameraMode {
+        /// Simulator interface mock of the enum case `ar` of the `ARView.CameraMode` enumeration.
+        ///
+        /// The (real) enumeration case isn't exposed to simulators by `RealityKit`.
+        ///
+        /// - SeeAlso:
+        /// [ Documentation](https://developer.apple.com/documentation/realitykit/arview/cameramode/ar)
         case ar
+        /// Simulator interface mock of the enum case `nonAR` of the `ARView.CameraMode` enumeration.
+        ///
+        /// The (real) enumeration case isn't exposed to simulators by `RealityKit`.
+        ///
+        /// - SeeAlso:
+        /// [ Documentation](https://developer.apple.com/documentation/realitykit/arview/cameramode/nonar)
         case nonAR
     }
 
+    /// Simulator interface mock of the instance property `ARView.cameraMode`.
+    ///
+    /// The (real) instance property isn't exposed to simulators by `RealityKit`.
+    ///
+    /// - SeeAlso:
+    /// [ Documentation](https://developer.apple.com/documentation/realitykit/arview/3255305-cameramode)
     public var cameraMode: RealityKit.ARView.CameraMode {
         get { .nonAR }
         set { }
     }
 
+    /// Simulator interface mock of the instance property `ARView.automaticallyConfigureSession`.
+    ///
+    /// The (real) instance property isn't exposed to simulators by `RealityKit`.
+    ///
+    /// - SeeAlso:
+    /// [ Documentation](https://developer.apple.com/documentation/realitykit/arview/3340491-automaticallyconfiguresession)
     public var automaticallyConfigureSession: Swift.Bool {
         get { false }
         set { }
@@ -411,6 +447,12 @@ extension RealityKit.ARView.CameraMode : Swift.Hashable { }
 @available(iOS 13.0, *)
 extension RealityKit.ARView {
 
+    /// Simulator interface mock of `ARView.EntityGestures`.
+    ///
+    /// The (real) `OptionSet` isn't exposed to simulators by `RealityKit`.
+    ///
+    /// - SeeAlso:
+    /// [ Documentation](https://developer.apple.com/documentation/realitykit/arview/entitygestures)
     public struct EntityGestures : Swift.OptionSet {
 
         // MARK: RawRepresentable
@@ -425,16 +467,46 @@ extension RealityKit.ARView {
 
         // MARK: EntityGestures
 
+        /// Simulator interface mock of `ARView.EntityGestures.translation`.
+        ///
+        /// The (real) option isn't exposed to simulators by `RealityKit`.
+        ///
+        /// - SeeAlso:
+        /// [ Documentation](https://developer.apple.com/documentation/realitykit/arview/entitygestures/3255251-translation)
         public static let translation: Self = .init(rawValue: 1 << 0)
 
+        /// Simulator interface mock of `ARView.EntityGestures.rotation`.
+        ///
+        /// The (real) option isn't exposed to simulators by `RealityKit`.
+        ///
+        /// - SeeAlso:
+        /// [ Documentation](https://developer.apple.com/documentation/realitykit/arview/entitygestures/3255246-rotation)
         public static let rotation: Self = .init(rawValue: 1 << 1)
 
+        /// Simulator interface mock of `ARView.EntityGestures.scale`.
+        ///
+        /// The (real) option isn't exposed to simulators by `RealityKit`.
+        ///
+        /// - SeeAlso:
+        /// [ Documentation](https://developer.apple.com/documentation/realitykit/arview/entitygestures/3255247-scale)
         public static let scale: Self = .init(rawValue: 1 << 2)
 
+        /// Simulator interface mock of `ARView.EntityGestures.all`.
+        ///
+        /// The (real) option isn't exposed to simulators by `RealityKit`.
+        ///
+        /// - SeeAlso:
+        /// [ Documentation](https://developer.apple.com/documentation/realitykit/arview/entitygestures/3255227-all)
         public static let all: Self = [.translation, .rotation, .scale]
 
     }
 
+    /// Simulator interface mock of the instance method `ARView.installGestures(_:for:)`.
+    ///
+    /// The (real) instance method isn't exposed to simulators by `RealityKit`.
+    ///
+    /// - SeeAlso:
+    /// [ Documentation](https://developer.apple.com/documentation/realitykit/arview/3368185-installgestures)
     public func installGestures(_ gestures: RealityKit.ARView.EntityGestures = .all,
                                 for entity: RealityKit.HasCollision) -> [EntityGestureRecognizer] {
         return []
