@@ -1,12 +1,12 @@
 import XCTest
 
-import RealityKitt
 import RealityKit
+import RealityKitt
 
 // MARK: - RealityKit.BodyTrackingComponent
 
 @available(iOS 13.0, *)
-final class RealityFoundationBodyTrackingComponentTests: XCTestCase {
+final class BodyTrackingComponentTests: XCTestCase {
 
     func testInitializerAvailability_init() {
         _ = { BodyTrackingComponent() }
@@ -31,7 +31,7 @@ final class RealityFoundationBodyTrackingComponentTests: XCTestCase {
 // MARK: - RealityKit.BodyTrackingComponent + Target
 
 @available(iOS 13.0, *)
-final class RealityFoundationBodyTrackingComponentTargetTests: XCTestCase {
+final class BodyTrackingComponentTargetTests: XCTestCase {
 
     func testEnumCaseAvailability_body() {
         _ = { BodyTrackingComponent.Target.body(identifier: UUID()) }
