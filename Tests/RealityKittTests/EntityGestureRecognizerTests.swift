@@ -5,7 +5,7 @@ import RealityKit
 import RealityKitt
 
 @available(iOS 13.0, *)
-final class RealityKitEntityGestureRecognizerTests: XCTestCase {
+final class EntityGestureRecognizerTests: XCTestCase {
 
     func testProtocolAvailability() {
         let _: EntityGestureRecognizer = GestureMock()
