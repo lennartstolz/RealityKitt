@@ -29,7 +29,7 @@ Among other things:
 
 ```swift
 import RealityKit
-import RealityKiit
+import RealityKitt
 ```
 
 But you can also use the `targetEnvironment` compilation condition if you like to:
