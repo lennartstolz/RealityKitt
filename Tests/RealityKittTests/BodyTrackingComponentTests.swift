@@ -9,21 +9,21 @@ import RealityKitt
 final class BodyTrackingComponentTests: XCTestCase {
 
     func testInitializerAvailability_init() {
-        _ = { BodyTrackingComponent() }
-        _ = { BodyTrackingComponent.init() }
+        _ = BodyTrackingComponent()
+        _ = BodyTrackingComponent.init()
     }
 
     func testInitializerAvailability_init_target() {
-        _ = { BodyTrackingComponent(.any) }
-        _ = { BodyTrackingComponent.init(.any) }
+        _ = BodyTrackingComponent(.any)
+        _ = BodyTrackingComponent.init(.any)
     }
 
     func testTypePropertyAvailability_target() {
-        _ = { BodyTrackingComponent().target }
+        _ = BodyTrackingComponent().target
     }
 
     func testTypePropertyAvailability_isPaused() {
-        _ = { BodyTrackingComponent().isPaused }
+        _ = BodyTrackingComponent().isPaused
     }
 
 }
@@ -34,15 +34,15 @@ final class BodyTrackingComponentTests: XCTestCase {
 final class BodyTrackingComponentTargetTests: XCTestCase {
 
     func testEnumCaseAvailability_body() {
-        _ = { BodyTrackingComponent.Target.body(identifier: UUID()) }
+        _ = BodyTrackingComponent.Target.body(identifier: UUID())
     }
 
     func testEnumCaseAvailability_any() {
-        _ = { BodyTrackingComponent.Target.any }
+        _ = BodyTrackingComponent.Target.any
     }
 
     func testProtocolConformance_Hashable() {
-        _ = { BodyTrackingComponent.Target.any.hashValue }
+        _ = BodyTrackingComponent.Target.any.hashValue
     }
 
 }

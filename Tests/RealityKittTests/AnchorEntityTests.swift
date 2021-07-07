@@ -8,17 +8,17 @@ import RealityKitt
 final class AnchorEntityTests: XCTestCase {
 
     func testInitializerAvailability_init_plane_classification_minimumBounds() {
-        _ = { RealityKit.AnchorEntity(plane: .any) }
-        _ = { RealityKit.AnchorEntity.init(plane: .any) }
-        _ = { RealityKit.AnchorEntity(plane: .any, classification: .any) }
-        _ = { RealityKit.AnchorEntity.init(plane: .any, classification: .any) }
-        _ = { RealityKit.AnchorEntity(plane: .any, classification: .any, minimumBounds: [0, 0]) }
-        _ = { RealityKit.AnchorEntity.init(plane: .any, classification: .any, minimumBounds: [0, 0]) }
+        _ = RealityKit.AnchorEntity(plane: .any)
+        _ = RealityKit.AnchorEntity.init(plane: .any)
+        _ = RealityKit.AnchorEntity(plane: .any, classification: .any)
+        _ = RealityKit.AnchorEntity.init(plane: .any, classification: .any)
+        _ = RealityKit.AnchorEntity(plane: .any, classification: .any, minimumBounds: [0, 0])
+        _ = RealityKit.AnchorEntity.init(plane: .any, classification: .any, minimumBounds: [0, 0])
     }
 
     func testInitializerAvailability_init_anchor() {
-        _ = { AnchorEntity(anchor: ARAnchor(name: "⚓︎", transform: matrix_identity_float4x4)) }
-        _ = { AnchorEntity.init(anchor: ARAnchor(name: "⚓︎", transform: matrix_identity_float4x4))  }
+        _ = RealityKit.AnchorEntity(anchor: ARAnchor(name: "⚓︎", transform: matrix_identity_float4x4))
+        _ = RealityKit.AnchorEntity.init(anchor: ARAnchor(name: "⚓︎", transform: matrix_identity_float4x4))
     }
 
     func testInitializerAvailability_init_raycastResult() {

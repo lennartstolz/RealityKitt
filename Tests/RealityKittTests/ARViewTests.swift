@@ -9,11 +9,11 @@ import RealityKitt
 final class ARViewInitializerTests: XCTestCase {
 
     func testInitializerAvailability_init_frame_cameraMode_automaticallyConfigureSession() {
-        _ = { RealityKit.ARView(frame: .zero, cameraMode: .ar, automaticallyConfigureSession: true) }
+        _ = RealityKit.ARView(frame: .zero, cameraMode: .ar, automaticallyConfigureSession: true)
     }
 
     func testInitializerAvailability_init_frame_cameraMode() {
-        _ = { RealityKit.ARView(frame: .zero, cameraMode: .nonAR) }
+        _ = RealityKit.ARView(frame: .zero, cameraMode: .nonAR)
     }
 
 }
@@ -70,10 +70,8 @@ final class ARViewEnvironmentTests: XCTestCase {
     }
 
     func testInstancePropertyMutability_sceneUnderstanding() {
-        _ = {
-            let sceneUnderstanding = RealityKit.ARView(frame: .zero).environment.sceneUnderstanding
-            RealityKit.ARView(frame: .zero).environment.sceneUnderstanding = sceneUnderstanding
-        }
+        let sceneUnderstanding = RealityKit.ARView(frame: .zero).environment.sceneUnderstanding
+        RealityKit.ARView(frame: .zero).environment.sceneUnderstanding = sceneUnderstanding
     }
 
 }
@@ -84,11 +82,11 @@ final class ARviewEnvironmentSceneUnderstandingTests: XCTestCase {
     typealias Options = RealityKit.ARView.Environment.SceneUnderstanding.Options
 
     func testInstancePropertyAvailability_options() {
-        let _: () -> Options = { RealityKit.ARView(frame: .zero).environment.sceneUnderstanding.options }
+        let _: Options = RealityKit.ARView(frame: .zero).environment.sceneUnderstanding.options
     }
 
     func testInstancePropertyMutability_options() {
-        _ = { RealityKit.ARView(frame: .zero).environment.sceneUnderstanding.options = .default }
+        _ = RealityKit.ARView(frame: .zero).environment.sceneUnderstanding.options = .default
     }
 
 }
@@ -130,11 +128,11 @@ final class ARViewRenderOptionsTests: XCTestCase {
     // MARK: ARView
 
     func testInstancePropertyAvailability_renderOptions() {
-        let _: () -> RenderOptions = { RealityKit.ARView(frame: .zero).renderOptions }
+        let _: RenderOptions = RealityKit.ARView(frame: .zero).renderOptions
     }
 
     func testInstancePropertyMutability_renderOptions() {
-        _ = { RealityKit.ARView(frame: .zero).renderOptions = [.disableHDR, .disableAREnvironmentLighting] }
+        _ = RealityKit.ARView(frame: .zero).renderOptions = [.disableHDR, .disableAREnvironmentLighting]
     }
 
     // MARK: ARView.RenderOptions

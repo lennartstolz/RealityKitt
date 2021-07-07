@@ -10,12 +10,12 @@ final class HasSceneUnderstandingTests: XCTestCase {
 
     func testProtocolAvailability() {
         class Implementation: RealityKit.Entity, HasSceneUnderstanding { }
-        _ = { Implementation() }
+        _ = Implementation()
     }
 
     func testInstanceProperty_sceneUnderstanding() {
         class Implementation: RealityKit.Entity, HasSceneUnderstanding { }
-        _ = { Implementation().sceneUnderstanding }
+        _ = Implementation().sceneUnderstanding
 
     }
 

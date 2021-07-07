@@ -8,12 +8,12 @@ final class HasBodyTrackingTests: XCTestCase {
 
     func testProtocolAvailability() {
         class Implementation: Entity, HasBodyTracking { }
-        _ = { Implementation() }
+        _ = Implementation()
     }
 
     func testInstancePropertyAvailability_bodyTracking() {
         class Implementation: Entity, HasBodyTracking { }
-        _ = { Implementation().bodyTracking }
+        _ = Implementation().bodyTracking
     }
 
 }

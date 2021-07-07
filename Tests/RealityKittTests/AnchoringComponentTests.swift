@@ -8,8 +8,8 @@ import RealityKitt
 final class AnchoringComponentTests: XCTestCase {
 
     func testInitializerAvailability_init_anchor() {
-        _ = { RealityKit.AnchoringComponent(ARKit.ARAnchor(transform: matrix_identity_float4x4)) }
-        _ = { RealityKit.AnchoringComponent.init(ARKit.ARAnchor(transform: matrix_identity_float4x4)) }
+        _ = RealityKit.AnchoringComponent(ARKit.ARAnchor(transform: matrix_identity_float4x4))
+        _ = RealityKit.AnchoringComponent.init(ARKit.ARAnchor(transform: matrix_identity_float4x4))
     }
 
 }
@@ -20,27 +20,27 @@ final class AnchoringComponentTargetTests: XCTestCase {
     typealias Target = RealityKit.AnchoringComponent.Target
 
     func testEnumCaseAvailability_anchor() {
-        _ = { Target.anchor(identifier: UUID()) }
+        _ = Target.anchor(identifier: UUID())
     }
 
     func testEnumCaseAvailability_plane() {
-        _ = { Target.plane(.any, classification: .any, minimumBounds: [0, 0]) }
+        _ = Target.plane(.any, classification: .any, minimumBounds: [0, 0])
     }
 
     func testEnumCaseAvailability_image() {
-        _ = { Target.image(group: "🎨", name: "👨‍🎨") }
+        _ = Target.image(group: "🎨", name: "👨‍🎨")
     }
 
     func testEnumCaseAvailability_group() {
-        _ = { Target.image(group: "👫", name: "🤷‍♂️") }
+        _ = Target.image(group: "👫", name: "🤷‍♂️")
     }
 
     func testEnumCaseAvailability_face() {
-        _ = { Target.face }
+        _ = Target.face
     }
 
     func testEnumCase_body() {
-        _ = { Target.body }
+        _ = Target.body
     }
 
 }
